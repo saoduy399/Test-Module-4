@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Add a new student</h3>
+  <form *ngIf="formAdd" [formGroup]="formAdd" (ngSubmit)="submit()">
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" class="form-control" formControlName="name" >
+    </div>
+    <div class="mb-3">
+      <label>read</label>
+      <input type="text" class="form-control" formControlName="read">
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <button class="btn btn-outline-danger"><a style="text-decoration: none" routerLink="">Cancel</a></button>
+<!--    <button [disabled]="formAdd.invalid" type="submit" class="btn btn-primary">Submit</button>-->
+<!--    <button class="btn btn-outline-danger" routerLink="">Cancel</button>-->
+  </form>
+</div>

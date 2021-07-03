@@ -1,0 +1,18 @@
+<h2>My Awesome Reading List</h2>
+<a routerLink="add" class="btn btn-outline-success">Add a book</a>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Status</th>
+    <th scope="col">Option</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books; index as i">
+    <td>{{ book.name}}</td>
+    <td><button>{{ book.read}}</button></td>
+    <td><button  class="btn btn-outline-danger" (click)="delete(i)">Delete</button></td>
+  </tr>
+  </tbody>
+</table>
